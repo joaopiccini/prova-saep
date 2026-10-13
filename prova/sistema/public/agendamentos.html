@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinária - Agendamentos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <a href="principal.html" class="marca">🐾 Clínica Veterinária</a>
+        <a href="principal.html">← Início</a>
+    </header>
+
+    <main class="largo">
+        <h1>Agendamentos</h1>
+
+        <p id="mensagem-agendamentos" class="texto-apagado">Carregando agendamentos...</p>
+        <table id="tabela-agendamentos" class="escondido">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Horário</th>
+                    <th>Motivo</th>
+                    <th>Pet</th>
+                    <th>Espécie</th>
+                    <th>Raça</th>
+                    <th>Tutor</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th class="tabela-acoes">Alterar data</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela-agendamentos"></tbody>
+        </table>
+    </main>
+
+    <script src="js/agendamentos.js"></script>
+</body>
+</html>

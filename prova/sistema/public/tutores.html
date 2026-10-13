@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinária - Tutores</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <a href="principal.html" class="marca">🐾 Clínica Veterinária</a>
+        <a href="principal.html">← Início</a>
+    </header>
+
+    <main>
+        <h1>Tutores</h1>
+
+        <div class="busca">
+            <input type="text" id="input-busca" placeholder="Buscar tutor por nome...">
+            <button id="btn-buscar" class="botao-secundario">Buscar</button>
+        </div>
+
+        <div class="caixa">
+            <h2 id="titulo-formulario">Novo Tutor</h2>
+            <form id="form-tutor">
+                <input type="hidden" id="tutor-id">
+                <div class="campos">
+                    <div class="campo">
+                        <label for="tutor-nome">Nome</label>
+                        <input type="text" id="tutor-nome" required>
+                    </div>
+                    <div class="campo">
+                        <label for="tutor-cpf">CPF</label>
+                        <input type="text" id="tutor-cpf" placeholder="000.000.000-00" required>
+                    </div>
+                    <div class="campo">
+                        <label for="tutor-telefone">Telefone</label>
+                        <input type="text" id="tutor-telefone" placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="campo">
+                        <label for="tutor-email">E-mail</label>
+                        <input type="email" id="tutor-email">
+                    </div>
+                </div>
+                <div class="acoes-formulario">
+                    <button type="submit">Salvar</button>
+                    <button type="button" id="btn-cancelar-edicao" class="botao-secundario escondido">Cancelar edição</button>
+                </div>
+            </form>
+        </div>
+
+        <p id="mensagem-tutores" class="texto-apagado">Carregando tutores...</p>
+        <table id="tabela-tutores" class="escondido">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th class="tabela-acoes">Ações</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela-tutores"></tbody>
+        </table>
+    </main>
+
+    <script src="js/tutores.js"></script>
+</body>
+</html>
