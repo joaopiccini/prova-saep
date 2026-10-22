@@ -1,14 +1,3 @@
-// ============================================================
-// public/js/pets.js
-// ============================================================
-// carregarTutores() e carregarPets() já estão prontas (BASE
-// FORNECIDA). Elas dependem das rotas GET /api/tutores e
-// GET /api/pets, que vocês desenvolvem no back-end.
-//
-// O QUE VOCÊ DESENVOLVE: o envio do formulário de cadastro do
-// pet, associando-o ao tutor selecionado.
-// ============================================================
-
 const formPet = document.getElementById("form-pet");
 const petNomeInput = document.getElementById("pet-nome");
 const petEspecieSelect = document.getElementById("pet-especie");
@@ -27,9 +16,6 @@ async function inicializar() {
     await carregarPets();
 }
 
-// ------------------------------------------------------------
-// BASE FORNECIDA - popula o <select> de tutores
-// ------------------------------------------------------------
 async function carregarTutores() {
     try {
         const resposta = await fetch("/api/tutores");
@@ -55,9 +41,6 @@ async function carregarTutores() {
     }
 }
 
-// ------------------------------------------------------------
-// BASE FORNECIDA - lista os pets cadastrados com o nome do tutor
-// ------------------------------------------------------------
 async function carregarPets() {
     try {
         const resposta = await fetch("/api/pets");
@@ -97,9 +80,6 @@ async function carregarPets() {
     }
 }
 
-// ------------------------------------------------------------
-// Cadastrar pet associado a um tutor
-// ------------------------------------------------------------
 formPet.addEventListener("submit", async (evento) => {
     evento.preventDefault();
 

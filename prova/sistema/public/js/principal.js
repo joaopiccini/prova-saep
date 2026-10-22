@@ -1,13 +1,3 @@
-// ============================================================
-// public/js/principal.js
-// ============================================================
-// ESTE ARQUIVO É COM VOCÊ (ALUNO DESENVOLVE).
-//
-// O que falta:
-//   - exibir o nome do usuário autenticado em #nome-usuario
-//   - implementar o logout no botão #btn-sair
-// ============================================================
-
 const nomeUsuarioEl = document.getElementById("nome-usuario");
 const btnSair = document.getElementById("btn-sair");
 

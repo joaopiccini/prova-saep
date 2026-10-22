@@ -1,10 +1,3 @@
-// ============================================================
-// src/routes/tutores.js
-// ============================================================
-// Este arquivo já está pronto (BASE FORNECIDA).
-// O que falta está em TutorController e TutorModel.
-// ============================================================
-
 const express = require("express");
 const { TutorController } = require("../controllers/TutorController");
 const { verificarSessao } = require("../middlewares/autenticacao");

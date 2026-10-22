@@ -1,23 +1,9 @@
-// ============================================================
-// src/controllers/TutorController.js
-// ============================================================
-// ESTE ARQUIVO É COM VOCÊS (ALUNO DESENVOLVE).
-//
-// Lembretes:
-//   - CPF: CRIPTOGRAFAR ao salvar/atualizar e DESCRIPTOGRAFAR ao
-//     listar (src/utils/criptografia.js)
-//   - Status: 200 OK | 201 criado | 400 dados inválidos |
-//     404 não encontrado | 500 erro no servidor
-// ============================================================
-
 const { TutorModel } = require("../models/Tutor");
 const { criptografarCPF, descriptografarCPF } = require("../utils/criptografia");
 
 class TutorController {
-    // ─────────────────────────────────────────
-    // GET /api/tutores            -> listar tutores
-    // GET /api/tutores?busca=termo -> listar tutores filtrados
-    // ─────────────────────────────────────────
+    // GET /api/tutores
+    // GET /api/tutores?busca=termo
     async listar(req, res) {
         try {
             const termoBusca = req.query.busca;
@@ -32,9 +18,7 @@ class TutorController {
         }
     }
 
-    // ─────────────────────────────────────────
-    // POST /api/tutores -> inserir novo tutor
-    // ─────────────────────────────────────────
+    // POST /api/tutores
     async criar(req, res) {
         try {
             const { nome, cpf, telefone, email } = req.body;
@@ -49,16 +33,13 @@ class TutorController {
         }
     }
 
-    // ─────────────────────────────────────────
-    // PUT /api/tutores/:id -> editar tutor existente
-    // ─────────────────────────────────────────
+    // PUT /api/tutores/:id
     async editar(req, res) {
         try {
             const { id } = req.params;
             const { nome, cpf, telefone, email } = req.body;
 
-            // TODO: validar, criptografar o CPF e chamar o model.
-            // Nenhuma linha alterada -> 404 (tutor não encontrado)
+            // TODO: validar, criptografar o CPF e chamar o model. Nenhuma linha alterada -> 404.
 
             return res.status(200).json({}); // TODO: devolver uma confirmação
         } catch (erro) {
@@ -66,16 +47,12 @@ class TutorController {
         }
     }
 
-    // ─────────────────────────────────────────
-    // DELETE /api/tutores/:id -> excluir tutor
-    // ─────────────────────────────────────────
+    // DELETE /api/tutores/:id
     async excluir(req, res) {
         try {
             const { id } = req.params;
 
-            // TODO: chamar o model. Nenhuma linha removida -> 404
-            // Tutor com pet cadastrado não pode ser excluído (chave
-            // estrangeira): o SQLite gera um erro, que cai no catch.
+            // TODO: chamar o model. Nenhuma linha removida -> 404.
 
             return res.status(200).json({ mensagem: "Tutor removido com sucesso." });
         } catch (erro) {

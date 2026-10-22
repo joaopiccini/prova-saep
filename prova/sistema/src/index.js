@@ -1,13 +1,3 @@
-// ============================================================
-// src/index.js
-// ============================================================
-// QUASE TODO PRONTO (BASE FORNECIDA).
-// Além de registrar as rotas, ele configura:
-//   - express.json(): faz o req.body funcionar (POST/PUT em JSON)
-//   - express.static("public"): entrega as telas HTML/CSS/JS
-//   - session(): a sessão do usuário (express-session)
-// ============================================================
-
 const express = require("express");
 const session = require("express-session");
 const { roteadorAuth } = require("./routes/auth");
@@ -30,8 +20,7 @@ servidor.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: {
-        // TODO: defina o tempo de expiração da sessão (maxAge, em
-        // milissegundos). Sem ele, a sessão não expira.
+        // TODO: defina o tempo de expiração da sessão (maxAge, em milissegundos).
     }
 }));
 

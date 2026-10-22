@@ -1,23 +1,13 @@
-// ============================================================
-// src/controllers/AgendamentoController.js
-// ============================================================
-// ESTE ARQUIVO É COM VOCÊS (ALUNO DESENVOLVE).
-// ============================================================
-
 const { AgendamentoModel } = require("../models/Agendamento");
 const { descriptografarCPF } = require("../utils/criptografia");
 
 class AgendamentoController {
-    // ─────────────────────────────────────────
-    // GET /api/agendamentos -> listar agendamentos ordenados por
-    // dia, com todos os dados do tutor e do pet
-    // ─────────────────────────────────────────
+    // GET /api/agendamentos
     async listar(req, res) {
         try {
             const agendamentos = await new AgendamentoModel().buscarTodos();
 
-            // TODO: o CPF do tutor vem criptografado do banco.
-            // Descriptografe antes de responder.
+            // TODO: descriptografar o CPF do tutor antes de responder.
 
             return res.status(200).json(agendamentos);
         } catch (erro) {
@@ -25,9 +15,7 @@ class AgendamentoController {
         }
     }
 
-    // ─────────────────────────────────────────
-    // PUT /api/agendamentos/:id -> atualizar a data do agendamento
-    // ─────────────────────────────────────────
+    // PUT /api/agendamentos/:id
     async atualizarData(req, res) {
         try {
             const { id } = req.params;

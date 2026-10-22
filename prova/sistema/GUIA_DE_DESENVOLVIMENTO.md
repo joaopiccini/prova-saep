@@ -47,7 +47,7 @@ Os pontos a completar estão marcados com `TODO` nos arquivos.
   de agendamentos.
 - Datas são texto no formato `AAAA-MM-DD` (o mesmo do
   `<input type="date">`), então ordenar por elas funciona.
-- `npm run rodar` usa nodemon: o servidor reinicia a cada arquivo
+- `npm run dev` usa nodemon: o servidor reinicia a cada arquivo
   salvo e, como a sessão fica na memória, é preciso logar de novo.
 - Para testar a API sem a tela (Postman/Insomnia/Thunder Client),
   faça antes o `POST /api/auth/login` na mesma ferramenta.

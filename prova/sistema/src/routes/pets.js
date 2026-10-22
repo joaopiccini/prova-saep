@@ -1,10 +1,3 @@
-// ============================================================
-// src/routes/pets.js
-// ============================================================
-// Este arquivo já está pronto (BASE FORNECIDA).
-// O que falta está em PetController e PetModel.
-// ============================================================
-
 const express = require("express");
 const { PetController } = require("../controllers/PetController");
 const { verificarSessao } = require("../middlewares/autenticacao");

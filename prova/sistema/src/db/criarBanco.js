@@ -1,14 +1,3 @@
-// ============================================================
-// src/db/criarBanco.js
-// ============================================================
-// Este arquivo já está pronto (BASE FORNECIDA).
-// Recria o arquivo src/db/clinica.db a partir do script
-// saep_db.sql (que fica na raiz do projeto, fora de sistema/).
-//
-// Rode de dentro da pasta sistema/:  npm run criar-banco
-// Sempre que alterar o saep_db.sql, rode de novo.
-// ============================================================
-
 const fs = require("fs");
 const { conectarComBancoDeDados } = require("./conexao");
 

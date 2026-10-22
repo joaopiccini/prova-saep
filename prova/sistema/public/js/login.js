@@ -1,10 +1,3 @@
-// ============================================================
-// public/js/login.js
-// ============================================================
-// Este arquivo já está pronto (BASE FORNECIDA).
-// Exibe a mensagem de erro que a API devolver (status 400/401).
-// ============================================================
-
 const formLogin = document.getElementById("form-login");
 const mensagemErro = document.getElementById("mensagem-erro");
 

@@ -30,7 +30,7 @@ sistema/
 └── public/                      # telas HTML/CSS/JS (VOCÊ COMPLETA)
 ```
 
-## Como rodar
+## Como executar
 
 Dentro da pasta `sistema/`:
 
@@ -38,7 +38,7 @@ Dentro da pasta `sistema/`:
 2. `npm run criar-banco` (gera `src/db/clinica.db` a partir do
    `saep_db.sql` da raiz do projeto - rode de novo sempre que
    alterar o script)
-3. `npm run rodar`
+3. `npm run dev`
 4. Acesse http://localhost:3000/
 
 Usuários de teste:

@@ -1,9 +1,3 @@
-// ============================================================
-// src/models/Usuario.js
-// ============================================================
-// Este arquivo já está pronto (BASE FORNECIDA).
-// ============================================================
-
 const { conectarComBancoDeDados } = require("../db/conexao");
 
 class UsuarioModel {

@@ -1,18 +1,7 @@
-// ============================================================
-// src/controllers/PetController.js
-// ============================================================
-// listar() já está pronto. O que vocês desenvolvem é o criar().
-//
-// Lembrete: todo pet é obrigatoriamente associado a um tutor
-// (tutor_id não pode ser nulo).
-// ============================================================
-
 const { PetModel } = require("../models/Pet");
 
 class PetController {
-    // ─────────────────────────────────────────
-    // GET /api/pets -> listar pets com o nome do tutor
-    // ─────────────────────────────────────────
+    // GET /api/pets
     async listar(req, res) {
         try {
             const pets = await new PetModel().buscarTodos();
@@ -23,9 +12,7 @@ class PetController {
         }
     }
 
-    // ─────────────────────────────────────────
-    // POST /api/pets -> inserir novo pet, associado a um tutor
-    // ─────────────────────────────────────────
+    // POST /api/pets
     async criar(req, res) {
         try {
             const { nome, especie, raca, tutor_id } = req.body;

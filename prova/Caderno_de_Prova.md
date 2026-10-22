@@ -98,7 +98,7 @@ padrão de organização do código fornecido:
 - Front-end: HTML, CSS e JavaScript puros (`sistema/public/`), sem
   frameworks de interface
 
-Consulte `sistema/README.md` para rodar o projeto e
+Consulte `sistema/README.md` para executar o projeto e
 `sistema/GUIA_DE_DESENVOLVIMENTO.md` para o roteiro do que falta
 desenvolver.
 

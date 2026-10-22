@@ -1,12 +1,3 @@
-// ============================================================
-// public/js/tutores.js
-// ============================================================
-// ESTE ARQUIVO É COM VOCÊ (ALUNO DESENVOLVE).
-//
-// Elementos, eventos e nomes de função já estão prontos. Falta o
-// conteúdo das funções marcadas com TODO.
-// ============================================================
-
 const corpoTabela = document.getElementById("corpo-tabela-tutores");
 const tabela = document.getElementById("tabela-tutores");
 const mensagemTutores = document.getElementById("mensagem-tutores");
@@ -29,9 +20,6 @@ async function inicializar() {
     await carregarTutores();
 }
 
-// ------------------------------------------------------------
-// Listar tutores (também usada pela busca)
-// ------------------------------------------------------------
 async function carregarTutores(termoBusca = "") {
     try {
         // TODO: GET /api/tutores (ou /api/tutores?busca=termo,
@@ -44,9 +32,6 @@ async function carregarTutores(termoBusca = "") {
     }
 }
 
-// ------------------------------------------------------------
-// Desenha a tabela de tutores
-// ------------------------------------------------------------
 function renderizarTutores(tutores) {
     // TODO: lista vazia -> mensagem "Nenhum tutor encontrado." e
     // tabela escondida (classe "escondido").
@@ -55,16 +40,10 @@ function renderizarTutores(tutores) {
     // addEventListener desses botões.
 }
 
-// ------------------------------------------------------------
-// Busca
-// ------------------------------------------------------------
 btnBuscar.addEventListener("click", () => {
-    // TODO
+    // TODO: carregarTutores com o termo da busca.
 });
 
-// ------------------------------------------------------------
-// Salvar (inserir novo ou editar existente)
-// ------------------------------------------------------------
 formTutor.addEventListener("submit", async (evento) => {
     evento.preventDefault();
 
@@ -98,18 +77,12 @@ function limparFormulario() {
     btnCancelarEdicao.classList.add("escondido");
 }
 
-// ------------------------------------------------------------
-// Chamada pelos botões "Editar"
-// ------------------------------------------------------------
 function preencherFormularioParaEdicao(tutor) {
     // TODO: preencher os campos do formulário (inclusive
     // tutorIdInput), trocar o tituloFormulario para "Editar Tutor"
     // e mostrar o btnCancelarEdicao.
 }
 
-// ------------------------------------------------------------
-// Chamada pelos botões "Excluir"
-// ------------------------------------------------------------
 async function excluirTutor(id) {
     if (!confirm("Deseja realmente excluir este tutor?")) return;
 

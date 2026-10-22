@@ -1,9 +1,3 @@
-// ============================================================
-// src/routes/auth.js
-// ============================================================
-// Este arquivo já está pronto (BASE FORNECIDA).
-// ============================================================
-
 const express = require("express");
 const { AuthController } = require("../controllers/AuthController");
 

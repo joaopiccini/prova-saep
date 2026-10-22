@@ -1,12 +1,3 @@
-// ============================================================
-// public/js/agendamentos.js
-// ============================================================
-// ESTE ARQUIVO É COM VOCÊ (ALUNO DESENVOLVE).
-//
-// formatarData() já está pronta. A data é guardada no banco como
-// texto AAAA-MM-DD, o mesmo formato do <input type="date">.
-// ============================================================
-
 const corpoTabela = document.getElementById("corpo-tabela-agendamentos");
 const tabela = document.getElementById("tabela-agendamentos");
 const mensagemAgendamentos = document.getElementById("mensagem-agendamentos");
@@ -17,15 +8,11 @@ async function inicializar() {
     await carregarAgendamentos();
 }
 
-// "2026-11-05" -> "05/11/2026"
 function formatarData(dataAAAAMMDD) {
     const [ano, mes, dia] = dataAAAAMMDD.split("-");
     return `${dia}/${mes}/${ano}`;
 }
 
-// ------------------------------------------------------------
-// Listar agendamentos (ordenados por dia, com tutor e pet)
-// ------------------------------------------------------------
 async function carregarAgendamentos() {
     try {
         // TODO: GET /api/agendamentos, tratar o 401 e chamar
@@ -46,9 +33,6 @@ function renderizarAgendamentos(agendamentos) {
     // e o addEventListener de cada botão "Salvar".
 }
 
-// ------------------------------------------------------------
-// Atualizar a data de um agendamento
-// ------------------------------------------------------------
 async function atualizarDataAgendamento(id, novaData) {
     try {
         // TODO: PUT /api/agendamentos/{id} com { data_agendamento }.
